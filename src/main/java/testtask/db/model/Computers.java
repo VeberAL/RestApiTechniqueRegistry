@@ -46,39 +46,28 @@ public class Computers implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer c_id;
 
-//    @OneToMany(targetEntity = Registry.class, mappedBy = "Computers" , fetch = FetchType.LAZY)
-//    private List<Registry> registryList;
-
-    @NonNull
-    @Column(name = "c_name")
+    @Column(nullable = false, name = "c_name")
     private String c_name;
 
-    @NonNull
-    @Column(name = "c_serial_number")
+    @Column(nullable = false, name = "c_serial_number")
     private String c_serial_number;
 
-    @NonNull
-    @Column(name = "c_color")
+    @Column(nullable = false, name = "c_color")
     private String c_color;
 
-    @NonNull
-    @Column(name = "c_size")
+    @Column(nullable = false, name = "c_size")
     private String c_size;
 
-    @NonNull
-    @Column(name = "c_price")
+    @Column(nullable = false, name = "c_price")
     private Integer c_price;
 
-    @NonNull
-    @Column(name = "c_memory")
+    @Column(nullable = false, name = "c_memory")
     private String c_memory;
 
-    @NonNull
-    @Column(name = "c_processor")
+    @Column(nullable = false, name = "c_processor")
     private String c_processor;
 
-    @NonNull
-    @Column(name = "c_availability")
+    @Column(nullable = false, name = "c_availability")
     private String c_availability;
 
 }

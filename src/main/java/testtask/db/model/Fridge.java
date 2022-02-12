@@ -44,38 +44,27 @@ public class Fridge implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer f_id;
 
-//    @OneToMany(targetEntity = Registry.class, mappedBy = "Fridge" , fetch = FetchType.LAZY)
-//    private List<Registry> registryList;
-
-    @NonNull
-    @Column(name = "f_name")
+    @Column(nullable = false, name = "f_name")
     private String f_name;
 
-    @NonNull
-    @Column(name = "f_serial_number")
+    @Column(nullable = false, name = "f_serial_number")
     private String f_serial_number;
 
-    @NonNull
-    @Column(name = "f_color")
+    @Column(nullable = false, name = "f_color")
     private String f_color;
 
-    @NonNull
-    @Column(name = "f_size")
+    @Column(nullable = false, name = "f_size")
     private String f_size;
 
-    @NonNull
-    @Column(name = "f_price")
+    @Column(nullable = false, name = "f_price")
     private Integer f_price;
 
-    @NonNull
-    @Column(name = "f_door_quantity")
+    @Column(nullable = false, name = "f_door_quantity")
     private Integer f_door_quantity;
 
-    @NonNull
-    @Column(name = "f_camera_quantity")
+    @Column(nullable = false, name = "f_camera_quantity")
     private Integer f_camera_quantity;
 
-    @NonNull
-    @Column(name = "f_availability")
+    @Column(nullable = false, name = "f_availability")
     private String f_availability;
 }

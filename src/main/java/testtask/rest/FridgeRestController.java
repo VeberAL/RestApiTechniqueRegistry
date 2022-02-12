@@ -55,17 +55,17 @@ public class FridgeRestController {
         fridgeService.delete(f_id);
     }
 
-    @PostMapping("/new/{f_id}_{f_name}_{f_serial_number}_{f_color}_{f_size}_{f_price}_{f_door_quantity}_{f_camera_quantity}_{f_availability}")
+    @PostMapping("/new")
     @ApiOperation("Создание нового")
-    public void create(@PathVariable("f_id") Integer f_id,
-                         @PathVariable("f_name") String f_name,
-                         @PathVariable("f_serial_number") String f_serial_number,
-                         @PathVariable("f_color") String f_color,
-                         @PathVariable("f_size") String f_size,
-                         @PathVariable("f_price") Integer f_price,
-                         @PathVariable("f_door_quantity") Integer f_door_quantity,
-                         @PathVariable("f_camera_quantity") Integer f_camera_quantity,
-                         @PathVariable("f_availability") String f_availability){
+    public void create(@RequestParam Integer f_id,
+                         @RequestParam String f_name,
+                         @RequestParam String f_serial_number,
+                         @RequestParam String f_color,
+                         @RequestParam String f_size,
+                         @RequestParam Integer f_price,
+                         @RequestParam Integer f_door_quantity,
+                         @RequestParam Integer f_camera_quantity,
+                         @RequestParam String f_availability){
         fridgeService.saveFr(f_id, f_name, f_serial_number, f_color, f_size, f_price, f_door_quantity, f_camera_quantity, f_availability);
     }
 }

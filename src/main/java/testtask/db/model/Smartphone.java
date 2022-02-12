@@ -43,37 +43,28 @@ public class Smartphone implements Serializable {
     @Column(name = "s_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer s_id;
-//    @OneToMany(targetEntity = Registry.class, mappedBy = "Smartphone" , fetch = FetchType.LAZY)
-//    private List<Registry> registryList;
-    @NonNull
-    @Column(name = "s_name")
+
+    @Column(nullable = false, name = "s_name")
     private String s_name;
 
-    @NonNull
-    @Column(name = "s_serial_number")
+    @Column(nullable = false, name = "s_serial_number")
     private String s_serial_number;
 
-    @NonNull
-    @Column(name = "s_color")
+    @Column(nullable = false, name = "s_color")
     private String s_color;
 
-    @NonNull
-    @Column(name = "s_size")
+    @Column(nullable = false, name = "s_size")
     private String s_size;
 
-    @NonNull
-    @Column(name = "s_price")
+    @Column(nullable = false, name = "s_price")
     private Integer s_price;
 
-    @NonNull
-    @Column(name = "s_memory")
+    @Column(nullable = false, name = "s_memory")
     private Integer s_memory;
 
-    @NonNull
-    @Column(name = "s_camera_quantity")
+    @Column(nullable = false, name = "s_camera_quantity")
     private Integer s_camera_quantity;
 
-    @NonNull
-    @Column(name = "s_availability")
+    @Column(nullable = false, name = "s_availability")
     private String s_availability;
 }

@@ -56,16 +56,16 @@ public class SmartphoneRestController {
     }
 
     @ApiOperation("Создание строки")
-    @PostMapping("/new/{s_id}_{s_name}_{s_serial_number}_{s_color}_{s_size}_{s_price}_{s_memory}_{s_camera_quantity}_{s_availability}")
-    public void create(@PathVariable("s_id") Integer s_id,
-                         @PathVariable("s_name") String s_name,
-                         @PathVariable("s_serial_number") String s_serial_number,
-                         @PathVariable("s_color") String s_color,
-                         @PathVariable("s_size") String s_size,
-                         @PathVariable("s_price") Integer s_price,
-                         @PathVariable("s_memory") Integer s_memory,
-                         @PathVariable("s_camera_quantity") Integer s_camera_quantity,
-                         @PathVariable("s_availability") String s_availability){
+    @PostMapping("/new")
+    public void create(@RequestParam Integer s_id,
+                         @RequestParam String s_name,
+                         @RequestParam String s_serial_number,
+                         @RequestParam String s_color,
+                         @RequestParam String s_size,
+                         @RequestParam Integer s_price,
+                         @RequestParam Integer s_memory,
+                         @RequestParam Integer s_camera_quantity,
+                         @RequestParam String s_availability){
         smartphoneService.saveFr(s_id, s_name, s_serial_number, s_color, s_size, s_price, s_memory, s_camera_quantity, s_availability);
     }
 }

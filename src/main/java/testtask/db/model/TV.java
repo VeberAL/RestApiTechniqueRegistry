@@ -44,36 +44,28 @@ public class TV implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer tv_id;
 
-    @NonNull
-    @Column(name = "tv_name")
+    @Column(nullable = false, name = "tv_name")
     private String tv_name;
 
-    @NonNull
-    @Column(name = "tv_serial_Number")
+    @Column(nullable = false, name = "tv_serial_Number")
     private String tv_serial_Number;
 
-    @NonNull
-    @Column(name = "tv_color")
+    @Column(nullable = false, name = "tv_color")
     private String tv_color;
 
-    @NonNull
-    @Column(name = "tv_size")
+    @Column(nullable = false, name = "tv_size")
     private String tv_size;
 
-    @NonNull
-    @Column(name = "tv_price")
+    @Column(nullable = false, name = "tv_price")
     private Integer tv_price;
 
-    @NonNull
-    @Column(name = "tv_category")
+    @Column(nullable = false, name = "tv_category")
     private String tv_category;
 
-    @NonNull
-    @Column(name = "tv_technology")
+    @Column(nullable = false, name = "tv_technology")
     private String tv_technology;
 
-    @NonNull
-    @Column(name = "tv_availability")
+    @Column(nullable = false, name = "tv_availability")
     private String tv_availability;
 
 }

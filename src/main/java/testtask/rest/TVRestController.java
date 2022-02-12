@@ -49,17 +49,17 @@ public class TVRestController {
         TVService.delete(tv_id);
     }
 
-    @PostMapping("/new/{tv_id}_{tv_name}_{tv_serial_Number}_{tv_color}_{tv_size}_{tv_price}_{tv_category}_{tv_technology}_{tv_availability}")
+    @PostMapping("/new")
     @ApiOperation("Создание")
-    public void createTV(@PathVariable("tv_id") Integer tv_id,
-                         @PathVariable("tv_name") String tv_name,
-                         @PathVariable("tv_serial_Number") String tv_serial_Number,
-                         @PathVariable("tv_color") String tv_color,
-                         @PathVariable("tv_size") String tv_size,
-                         @PathVariable("tv_price") Integer tv_price,
-                         @PathVariable("tv_category") String tv_category,
-                         @PathVariable("tv_technology") String tv_technology,
-                         @PathVariable("tv_availability") String tv_availability){
+    public void createTV(@RequestParam Integer tv_id,
+                         @RequestParam String tv_name,
+                         @RequestParam String tv_serial_Number,
+                         @RequestParam String tv_color,
+                         @RequestParam String tv_size,
+                         @RequestParam Integer tv_price,
+                         @RequestParam String tv_category,
+                         @RequestParam String tv_technology,
+                         @RequestParam String tv_availability){
         TVService.saveTV(tv_id, tv_name, tv_serial_Number, tv_color, tv_size, tv_price, tv_category, tv_technology, tv_availability);
     }
 
