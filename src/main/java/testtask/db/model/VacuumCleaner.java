@@ -44,39 +44,28 @@ public class VacuumCleaner implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer v_id;
 
-//    @OneToMany(targetEntity = Registry.class, mappedBy = "VacuumCleaner" , fetch = FetchType.LAZY)
-//    private List<Registry> registryList;
-
-    @NonNull
-    @Column(name = "v_name")
+    @Column(nullable = false, name = "v_name")
     private String v_name;
 
-    @NonNull
-    @Column(name = "v_serial_number")
+    @Column(nullable = false, name = "v_serial_number")
     private String v_serial_number;
 
-    @NonNull
-    @Column(name = "v_color")
+    @Column(nullable = false, name = "v_color")
     private String v_color;
 
-    @NonNull
-    @Column(name = "v_size")
+    @Column(nullable = false, name = "v_size")
     private String v_size;
 
-    @NonNull
-    @Column(name = "v_price")
+    @Column(nullable = false, name = "v_price")
     private Integer v_price;
 
-    @NonNull
-    @Column(name = "v_dust_size")
+    @Column(nullable = false, name = "v_dust_size")
     private Integer v_dust_size;
 
-    @NonNull
-    @Column(name = "v_mode_quantity")
+    @Column(nullable = false, name = "v_mode_quantity")
     private Integer v_mode_quantity;
 
-    @NonNull
-    @Column(name = "v_availability")
+    @Column(nullable = false, name = "v_availability")
     private String v_availability;
 
 }

@@ -49,17 +49,17 @@ public class VacuumCleanerRestController {
         vacuumCleanerService.delete(v_id);
     }
 
-    @PostMapping("/new/{v_id}_{v_name}_{v_serial_Number}_{v_color}_{v_size}_{v_price}_{v_dust_size}_{v_mode_quantity}_{v_availability}")
+    @PostMapping("/new")
     @ApiOperation("Создание")
-    public void createTV(@PathVariable("v_id") Integer v_id,
-                         @PathVariable("v_name") String v_name,
-                         @PathVariable("v_serial_Number") String v_serial_Number,
-                         @PathVariable("v_color") String v_color,
-                         @PathVariable("v_size") String v_size,
-                         @PathVariable("v_price") Integer v_price,
-                         @PathVariable("v_dust_size") Integer v_dust_size,
-                         @PathVariable("v_mode_quantity") Integer v_mode_quantity,
-                         @PathVariable("v_availability") String v_availability){
+    public void createTV(@RequestParam Integer v_id,
+                         @RequestParam String v_name,
+                         @RequestParam String v_serial_Number,
+                         @RequestParam String v_color,
+                         @RequestParam String v_size,
+                         @RequestParam Integer v_price,
+                         @RequestParam Integer v_dust_size,
+                         @RequestParam Integer v_mode_quantity,
+                         @RequestParam String v_availability){
         vacuumCleanerService.saveVC(v_id, v_name, v_serial_Number, v_color, v_size, v_price, v_dust_size, v_mode_quantity, v_availability);
     }
 

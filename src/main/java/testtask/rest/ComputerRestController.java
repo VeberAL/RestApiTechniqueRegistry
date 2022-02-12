@@ -55,17 +55,17 @@ public class ComputerRestController {
         computerService.delete(c_id);
     }
 
-    @PostMapping("/new/{c_id}_{c_name}_{c_serial_number}_{c_color}_{c_size}_{c_price}_{c_memory}_{c_processor}_{c_availability}")
+    @PostMapping("/new")
     @ApiOperation("Добавление нового компьютера в таблицу")
-    public void create(@PathVariable("c_id") Integer c_id,
-                         @PathVariable("c_name") String c_name,
-                         @PathVariable("c_serial_number") String c_serial_number,
-                         @PathVariable("c_color") String c_color,
-                         @PathVariable("c_size") String c_size,
-                         @PathVariable("c_price") Integer c_price,
-                         @PathVariable("c_memory") String c_memory,
-                         @PathVariable("c_processor") String c_processor,
-                         @PathVariable("c_availability") String c_availability){
+    public void create(@RequestParam Integer c_id,
+                         @RequestParam String c_name,
+                         @RequestParam String c_serial_number,
+                         @RequestParam String c_color,
+                         @RequestParam String c_size,
+                         @RequestParam Integer c_price,
+                         @RequestParam String c_memory,
+                         @RequestParam String c_processor,
+                         @RequestParam String c_availability){
         computerService.saveComp(c_id, c_name, c_serial_number, c_color, c_size, c_price, c_memory, c_processor, c_availability);
     }
 }
