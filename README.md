@@ -1,2 +1,3 @@
 # RestApiTechniqueRegistry
-Простой Rest api с сортировкой, фильтрацией и crud операциями с реестром технической продукции.
+Тестовое задание: Rest api с реестром технической продукции (с сортировкой, фильтрацией и crud операциями).
+Стэк: java, maven, spring boot, hibernate, postgresql.
